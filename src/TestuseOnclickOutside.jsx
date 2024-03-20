@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import useOnclickOutside from "./customHooks/useOnclickOutside";
+import useOutsideClick from "./customHooks/useOutsideClick";
 import Button from "./components/Button";
 import Info from "./components/Info";
 import "./index.scss";
@@ -7,7 +7,7 @@ import "./index.scss";
 export default function UseOnclickOutsideTest() {
   const [isVisible, setVisibility] = useState(false);
   const refModal = useRef();
-  useOnclickOutside(refModal, () => setVisibility(false));
+  useOutsideClick(refModal, () => setVisibility(false));
 
   return (
     <div className="main-container">
